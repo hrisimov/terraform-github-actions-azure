@@ -43,6 +43,12 @@ variable "mssql_firewall_rule_name" {
   description = "The name of the mssql firewall rule"
 }
 
+variable "gh_token" {
+  type        = string
+  description = "A secret value passed from GitHub Actions"
+  sensitive   = true
+}
+
 variable "repo_url" {
   type        = string
   description = "The URL to the repository in GitHub"

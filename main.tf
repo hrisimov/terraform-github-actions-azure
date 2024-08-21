@@ -77,7 +77,7 @@ resource "azurerm_mssql_firewall_rule" "mssql_firewall_rule" {
 
 resource "azurerm_source_control_token" "sc_token" {
   type  = "GitHub"
-  token = secrets.GH_TOKEN
+  token = var.gh_token
 }
 
 resource "azurerm_app_service_source_control" "sc" {

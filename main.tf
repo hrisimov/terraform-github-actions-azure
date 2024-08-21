@@ -75,6 +75,11 @@ resource "azurerm_mssql_firewall_rule" "mssql_firewall_rule" {
   end_ip_address   = "0.0.0.0"
 }
 
+resource "azurerm_source_control_token" "sc_token" {
+  type  = "GitHub"
+  token = secrets.GH_TOKEN
+}
+
 resource "azurerm_app_service_source_control" "sc" {
   app_id                 = azurerm_linux_web_app.app.id
   repo_url               = var.repo_url

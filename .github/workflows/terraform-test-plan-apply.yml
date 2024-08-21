@@ -87,4 +87,4 @@ jobs:
     - name: Terraform Apply
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: terraform apply -auto-approve terraform.plan -var="gh_token=${{ env.GH_TOKEN }}"
+      run: terraform apply -auto-approve terraform.plan
